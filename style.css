@@ -1,0 +1,600 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Martel Sans', serif;
+    background-color: #121212;
+    color: white;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Martel Sans', serif;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.3rem}
+
+/* Mian section*/
+.background-wrapper {
+    position: relative;
+    background-image: url('./assets/bgimage.jpg'); /* Large image covering both sections */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh; 
+    position: relative;
+}
+.black{
+    width: 100%;
+    min-height: 100vh; 
+    position:absolute;
+    background-color: rgba(0, 0, 0,0.4);
+
+}
+/* Navbar Styling */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    color: white;
+    z-index:1;
+}
+
+.logo img {
+    width: 190px;
+    object-fit: contain;
+}
+
+.navbutton {
+    display: flex;
+    gap: 15px;
+}
+
+.lang {
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.signin {
+    padding: 12px 20px;
+    background-color: #f0a500;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.signin:hover {
+    background-color: #e68900;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 60px 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+.main{
+    z-index:1;
+}
+/* Main Content of Hero */
+.maincont .hero-heading {
+    font-size: 48px;
+    font-weight: 800;
+    display:block;
+}
+
+.hero-subtitle {
+    font-size: 22px;
+    font-weight: 800;
+    word-spacing: 4px;
+}
+
+.hero-description {
+    font-size: 1rem;
+    color: #dbcece;
+
+}
+
+/* Search Bar */
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 30px auto;
+}
+
+.search input {
+    padding: 14px 30px;
+    border-radius: 12px; 
+    border: 2px solid black;
+    width: 400px;
+    border: none; 
+    color: black;
+    font-size: 1.2rem;
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.search input:focus {
+    background-color: #e4dcdc; 
+  
+}
+.search button {
+    padding: 14px 30px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #f0a500, #e68900); 
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+
+.faq-section {
+    background-color: #121212;
+    padding: 40px 0;
+}
+
+.faq-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    background-color: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.accordion-header {
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: #444;
+}
+
+.accordion-icon {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.accordion-header:hover .accordion-icon {
+    color: #f0a500;
+}
+
+.accordion-content {
+    padding: 15px;
+    background-color: #222;
+    font-size: 1rem;
+    color: white;
+    display: none;
+}
+
+.accordion-item input:checked + label .accordion-icon {
+    transform: rotate(45deg);
+    color: #f0a500; /
+}
+
+.accordion-item input:checked  + label + .accordion-content {
+    display: block;
+}
+
+.accordion-item input {
+    display: none;
+}
+
+
+/* Blog Section */
+
+#blogs-h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 30px;
+    font-weight: 600;
+    padding: 40px 20px; 
+}
+
+.blog-post {
+    background-color: #1e1e1e;
+    padding: 20px;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+    text-align: left;
+}
+
+.blog-post img {
+    width: 100%;
+    height: 180px; 
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.blog-post:hover {
+    transform: scale(1.05);
+}
+
+.blog-post p {
+    color: gray;
+    font-size: 0.9rem;
+}
+
+.blog-post i {
+    margin-right: 5px;
+}
+
+.blog-post h3 {
+    color: white;
+    font-size: 1.2rem;
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+/* Flexbox for the blog posts container */
+.blogs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+
+
+/* animal services section */
+.services {
+    padding: 60px 20px;
+    text-align: center;
+    
+}
+
+.services .bottom h3 {
+    font-size: 2rem;
+    color: #e6dada;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.reason {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 0 20px;
+   
+}
+
+/* Card Styles */
+.card {
+    color:white;
+    padding: 25px;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    border:2px solid #f7b500;
+}
+
+.card h2 {
+    color:white;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.card p {
+    color: #777;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Hover Effects */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card:hover h2 {
+    color:#dbcece;
+    
+}
+
+
+
+/* Footer */
+footer {
+    background-color: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+/* Animal Pics Section */
+#animalpics {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  #animalpics .section-title h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 40px;
+  }
+ 
+  
+  .animal-pics-container {
+    display: flex; 
+    gap: 20px;
+    padding: 20px;
+    overflow-x: auto; 
+    width: 100%; 
+    scroll-snap-type: x mandatory; 
+}
+
+.animal-pic {
+    border-radius: 8px;
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    display: inline-block; 
+    min-width: 292px; 
+    scroll-snap-align: start; 
+    height:400px;
+    position:relative;
+}
+
+.animal-pic img {
+    width: 100%;
+    height: 55%;
+    display: block;
+    border-radius: 11px 11px 0 0;
+    object-fit: cover;
+  
+    
+}
+.animal-pic div{
+    position:relative;
+}
+
+.animal-pic h3 {
+    font-size: 1.1rem;
+    color: white;
+}
+
+.animal-description {
+    font-size: 0.8rem;
+    color: #777;
+    padding: 10px;
+    text-align: justify;
+
+}
+
+.animal-pic .adopt-btn {
+    background-color:#e68900;
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 20px 0;
+}
+
+.animal-pic .adopt-btn:hover {
+    background-color:#c17503;
+}
+
+.animal-pic:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.animal-pic h3 {
+    padding: 10px;
+    background-color:#e4b73c;
+    color: #fff;
+    border-radius: 0 8px 0 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: absolute;
+    top:43%;
+
+}
+
+.animal-pic:hover h3 {
+    background-color:#f7b500;
+}
+
+.animal-pics-container::-webkit-scrollbar {
+    display: none;
+}
+/* pet rescue section */
+
+.pet-rescue-facts {
+    background-image: url("./assets/petrescue.jpg");
+    background-color: rgba(0, 0, 0, 0.5); 
+    background-blend-mode: overlay;
+    padding: 50px 20px;
+    color: white;
+    text-align: center;
+}
+
+
+  .pet-rescue-facts .content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .pet-rescue-facts .fun-fact {
+    font-size: 16px;
+    color: #f7b500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .pet-rescue-facts h1 {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+  .pet-rescue-facts p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .pet-rescue-facts .stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+  }
+  
+  .pet-rescue-facts .stats div {
+    text-align: center;
+  }
+  .pet-rescue-facts .stats h2 {
+    font-size: 32px;
+    color: #eae6dc;
+    margin-bottom: 10px;
+  }
+  
+  .pet-rescue-facts .stats p {
+    font-size: 16px;
+    margin: 0;
+  }
+
+
+
+/* footer section */
+  .footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+    padding-bottom: 22px;
+    gap: 19px;
+    /* border:2px solid red; */
+}
+.footercontainer{
+        border:2px solid white;
+        color: white;
+    
+}
+.team{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.team span{
+    font-size: 2rem;
+}
+.mem span{
+    font-size: 1.3rem;
+}
+.mem{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:5px;
+}
+.team{
+        text-align: center;
+        /* border:2px solid cyan */
+}
+
+.footer p{
+    font-weight: 500;
+    color: white;
+    
+}
+
+.members{
+    display: flex;
+    justify-content: space-around;
+   
+}
+.icons{
+    display: flex;
+   gap:10px;
+}
+.icons i{
+    font-size:20px;
+    color:#dbcece
+}
+.icons i:hover{
+    color:#f0a500;
+}
+
+.copyright{
+    font-size:13px;
+    color:#acabab;
+    margin-top:12px;
+    margin-bottom:14px;
+}
+#footer-heading{
+    margin-top:20px;
+}
+
